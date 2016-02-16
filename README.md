@@ -1,12 +1,12 @@
-# SDGTraining
-PeoplePro training for new hires
+#CASS Soft Dev Group Training
+###Microsoft .Net MVC Application with Entity Framework
 
-#Instructions
+##Where to Start
   * Fork the repo
   * Pull the repo in Visual Studio 2015/13
   * Read the instructions and ask questions!
 
-#Deliverables
+##Deliverables
   * MVC web application with basic crud (Create, Read, Update, and Delete) views
   * Entity framework models
   * Model metadata attributes
