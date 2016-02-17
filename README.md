@@ -15,3 +15,6 @@
   * Windows security 
   * Unit test
   * Schema of database
+  
+ ##Issues
+  * This project is for training purposes and may contain issues and bugs
