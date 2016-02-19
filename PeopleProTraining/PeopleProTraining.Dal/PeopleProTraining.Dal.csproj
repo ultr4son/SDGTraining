@@ -86,12 +86,14 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>PeopleProModels.Context.cs</LastGenOutput>
       <DependentUpon>PeopleProModels.edmx</DependentUpon>
+      <CustomToolNamespace>PeopleProTraining.Dal.Models</CustomToolNamespace>
     </Content>
     <Content Include="PeopleProModels.edmx.sql" />
     <Content Include="PeopleProModels.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>PeopleProModels.cs</LastGenOutput>
       <DependentUpon>PeopleProModels.edmx</DependentUpon>
+      <CustomToolNamespace>PeopleProTraining.Dal.Models</CustomToolNamespace>
     </Content>
   </ItemGroup>
   <ItemGroup>

@@ -13,6 +13,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar(max)" Nullable="true" />
   </EntityType>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -38,6 +39,7 @@
       <EntityTypeMapping TypeName="IsTypeOf(PeopleProModels.Employee)">
         <MappingFragment StoreEntitySet="Employees">
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

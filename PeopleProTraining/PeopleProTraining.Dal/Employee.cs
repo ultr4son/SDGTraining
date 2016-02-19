@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PeopleProTraining.Dal
+namespace PeopleProTraining.Dal.Models
 {
     using System;
     using System.Collections.Generic;
