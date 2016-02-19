@@ -6,16 +6,17 @@
   * Pull the repo in Visual Studio 2015/13
   * Read the instructions and ask questions!
 
-##Deliverables
+##Deliverables 
   * MVC web application with basic crud (Create, Read, Update, and Delete) views
   * Entity framework models
   * Model metadata attributes
   * Relational database for Employees, Departments, and Buildings
   * Use of display and editor templates
-  * Windows security 
+  * AJAX create and append to table for Departments or Buildings
+  * Windows security
   * Unit test
-  * Schema of database
-  
+  * Database project
+
  ##Issues
   * This project is for training purposes and may contain issues and bugs
   
