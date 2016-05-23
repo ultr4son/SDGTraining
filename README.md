@@ -9,7 +9,7 @@ Microsoft has a very easy tutorial to follow. We recommend starting there before
 ##Where to start
   * Fork the repo
   * Pull the repo in Visual Studio 2015/13
-  * Read the instructions and ask questions!
+  * Read the Deliverables
   * Pull Request after completing the project
 
 ##Deliverables 
