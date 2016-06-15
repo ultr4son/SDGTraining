@@ -6,6 +6,10 @@ Microsoft has a very easy tutorial to follow. We recommend starting there before
 
 [ASP.NET Movie DB](http://www.asp.net/mvc/overview/getting-started/introduction/getting-started) 
 
+If you are having trouble using git and github to manage this training project, work through the presentations below or ask for help.
+* [What is source control?](http://slides.com/justinc/deck#/)
+* [Learn You a Git](http://slides.com/justinc/learn-you-a-git#/)
+
 ##Where to start
   * Fork the repo
   * Pull the repo in Visual Studio 2015/13
