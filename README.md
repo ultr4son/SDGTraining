@@ -1,7 +1,9 @@
-#CASS Soft Dev Group Training
-###People Pro - Microsoft .Net MVC Application with Entity Framework
+# CASS Soft Dev Group Training
 
-##Before you start
+### People Pro - Microsoft .Net MVC Application with Entity Framework
+
+## Before you start
+
 Microsoft has a very easy tutorial to follow. We recommend starting there before this training application.
 
 [ASP.NET Movie DB](http://www.asp.net/mvc/overview/getting-started/introduction/getting-started) 
@@ -10,13 +12,13 @@ If you are having trouble using git and github to manage this training project, 
 * [What is source control?](http://slides.com/justinc/deck#/)
 * [Learn You a Git](http://slides.com/justinc/learn-you-a-git#/)
 
-##Where to start
+## Where to start
   * Fork the repo
   * Pull the repo in Visual Studio 2015/13
   * Read the Deliverables
   * Pull Request after completing the project
 
-##Deliverables 
+## Deliverables 
   * MVC web application with basic crud (Create, Read, Update, and Delete) views
   * Entity framework models
   * Model metadata attributes
@@ -27,7 +29,7 @@ If you are having trouble using git and github to manage this training project, 
   * Windows security
   * Testing
 
- ##Issues
+ ## Issues
   * This project is for training purposes and may contain issues and bugs
   
   
