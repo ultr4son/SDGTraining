@@ -8,14 +8,18 @@ using System.Threading.Tasks;
 namespace PeopleProTraining.Dal.Models
 {
     [MetadataType(typeof(EmployeeMetaData))]
-    public partial class Employee
+    public class Employee
     {
+        public int EmployeeId { get; set; }
+        public string FirstName { get; set; }
+        public virtual Department Department { get; set; }
     }
     public class EmployeeMetaData
     {
-        public int Id;
+        public int EmployeeId;
 
         [Required]
+        [Display(Name = "First Name")]
         public string FirstName;
 
     }

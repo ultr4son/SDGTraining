@@ -7,3 +7,5 @@ C:\Users\thomtris\Source\Repos\SDGTraining\PeopleProTraining\PeopleProTraining.D
 C:\Users\thomtris\Source\Repos\SDGTraining\PeopleProTraining\PeopleProTraining.Dal\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\thomtris\Source\Repos\SDGTraining\PeopleProTraining\PeopleProTraining.Dal\obj\Debug\PeopleProTraining.Dal.dll
 C:\Users\thomtris\Source\Repos\SDGTraining\PeopleProTraining\PeopleProTraining.Dal\obj\Debug\PeopleProTraining.Dal.pdb
+C:\Users\thomtris\Source\Repos\SDGTraining\PeopleProTraining\PeopleProTraining.Dal\obj\Debug\PeopleProTraining.Dal.Migrations.Bep.resources
+C:\Users\thomtris\Source\Repos\SDGTraining\PeopleProTraining\PeopleProTraining.Dal\obj\Debug\PeopleProTraining.Dal.csproj.GenerateResource.Cache

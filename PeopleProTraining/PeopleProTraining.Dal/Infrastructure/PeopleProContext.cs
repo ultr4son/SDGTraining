@@ -14,7 +14,9 @@ namespace PeopleProTraining.Dal.Infrastructure
         public PeopleProContext() : base("name=PeopleProTrainingDB") {
 
         }
-        public IDbSet<Employee> Employees { get; set; }
+        public IDbSet<Employee> EmployeesList { get; set; }
+        public IDbSet<Department> DepartmentsList { get; set; }
+        public IDbSet<Building> BuildingsList { get; set; }
 
     }
 }

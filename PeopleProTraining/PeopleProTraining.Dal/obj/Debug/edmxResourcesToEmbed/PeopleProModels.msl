@@ -11,15 +11,18 @@
     </EntitySetMapping>
     <EntitySetMapping Name="Departments">
       <EntityTypeMapping TypeName="IsTypeOf(PeopleProModels.Department)">
-        <MappingFragment StoreEntitySet="Employees">
+        <MappingFragment StoreEntitySet="Departments">
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Buildings">
       <EntityTypeMapping TypeName="IsTypeOf(PeopleProModels.Building)">
-        <MappingFragment StoreEntitySet="Employees">
+        <MappingFragment StoreEntitySet="Buildings">
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -27,11 +27,11 @@ namespace PeopleProTraining.Dal.Infrastructure
         #region employees
         public IQueryable<Employee> GetEmployees()
         {
-            return p_context.Employees;
+            return p_context.EmployeesList;
         }
         public IEnumerable<Employee> GetEmployees(Func<Employee, bool> predicate)
         {
-            return p_context.Employees.Where(predicate);
+            return p_context.EmployeesList.Where(predicate);
         }
 
         public Employee GetEmployee(Func<Employee, bool> predicate)
@@ -40,7 +40,7 @@ namespace PeopleProTraining.Dal.Infrastructure
         }
         public Employee GetEmployee(int id)
         {
-            return GetEmployee(t => t.Id == id);
+            return GetEmployee(t => t.EmployeeId == id);
         }
 
         #endregion
