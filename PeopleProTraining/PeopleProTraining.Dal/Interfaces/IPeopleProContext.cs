@@ -11,7 +11,7 @@ namespace PeopleProTraining.Dal.Interfaces
 {
     public interface IPeopleProContext : IDisposable
     {
-        IDbSet<Employee> EmployeesList { get; set; }
+        IDbSet<Employee> Employees { get; set; }
 
         int SaveChanges();
         DbEntityEntry Entry(object entity);

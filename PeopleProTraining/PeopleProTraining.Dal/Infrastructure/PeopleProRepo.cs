@@ -27,11 +27,11 @@ namespace PeopleProTraining.Dal.Infrastructure
         #region employees
         public IQueryable<Employee> GetEmployees()
         {
-            return p_context.EmployeesList;
+            return p_context.Employees;
         }
         public IEnumerable<Employee> GetEmployees(Func<Employee, bool> predicate)
         {
-            return p_context.EmployeesList.Where(predicate);
+            return p_context.Employees.Where(predicate);
         }
 
         public Employee GetEmployee(Func<Employee, bool> predicate)

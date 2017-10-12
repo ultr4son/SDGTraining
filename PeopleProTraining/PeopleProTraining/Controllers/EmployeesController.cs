@@ -18,7 +18,7 @@ namespace PeopleProTraining.Controllers
         // GET: Employees
         public ActionResult Index()
         {
-            return View(db.EmployeesList.ToList());
+            return View(db.Employees.ToList());
         }
 
         // GET: Employees/Details/5
@@ -28,7 +28,7 @@ namespace PeopleProTraining.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Employee employee = db.EmployeesList.Find(id);
+            Employee employee = db.Employees.Find(id);
             if (employee == null)
             {
                 return HttpNotFound();
@@ -51,7 +51,7 @@ namespace PeopleProTraining.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.EmployeesList.Add(employee);
+                db.Employees.Add(employee);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -66,7 +66,7 @@ namespace PeopleProTraining.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Employee employee = db.EmployeesList.Find(id);
+            Employee employee = db.Employees.Find(id);
             if (employee == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace PeopleProTraining.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Employee employee = db.EmployeesList.Find(id);
+            Employee employee = db.Employees.Find(id);
             if (employee == null)
             {
                 return HttpNotFound();
@@ -110,8 +110,8 @@ namespace PeopleProTraining.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Employee employee = db.EmployeesList.Find(id);
-            db.EmployeesList.Remove(employee);
+            Employee employee = db.Employees.Find(id);
+            db.Employees.Remove(employee);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

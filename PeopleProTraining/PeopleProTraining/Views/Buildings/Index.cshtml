@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<PeopleProTraining.Dal.Models.Building>
-
+@using PeopleProTraining.Models
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -13,27 +13,20 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.BuildingBep.DepartmentName)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.BuildingName)
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.BuildingBep.DepartmentName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BuildingName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.BuildingId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.BuildingId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.BuildingId })
-        </td>
+            @{ 
+                TableDisplayModel displayModel = new TableDisplayModel();
+                displayModel.DisplayValue = item.BuildingName;
+                displayModel.EditId = item.BuildingId;
+                @Html.Partial("../Shared/DisplayTemplates/TableDisplay", displayModel)
+            }
     </tr>
 }
 

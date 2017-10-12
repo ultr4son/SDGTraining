@@ -18,8 +18,7 @@ namespace PeopleProTraining.Controllers
         // GET: Departments
         public ActionResult Index()
         {
-            var departments = db.DepartmentsList.Include(d => d.DepartmentBuilding);
-            return View(departments.ToList());
+            return View(db.Departments.ToList());
         }
 
         // GET: Departments/Details/5
@@ -29,7 +28,7 @@ namespace PeopleProTraining.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Department department = db.DepartmentsList.Find(id);
+            Department department = db.Departments.Find(id);
             if (department == null)
             {
                 return HttpNotFound();
@@ -40,7 +39,6 @@ namespace PeopleProTraining.Controllers
         // GET: Departments/Create
         public ActionResult Create()
         {
-            ViewBag.DepartmentIdBep = new SelectList(db.BuildingsList, "BuildingId", "BuildingName");
             return View();
         }
 
@@ -49,16 +47,15 @@ namespace PeopleProTraining.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "DepartmentIdBep,DepartmentName")] Department department)
+        public ActionResult Create([Bind(Include = "DepartmentId,DepartmentName")] Department department)
         {
             if (ModelState.IsValid)
             {
-                db.DepartmentsList.Add(department);
+                db.Departments.Add(department);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.DepartmentIdBep = new SelectList(db.BuildingsList, "BuildingId", "BuildingName", department.DepartmentId);
             return View(department);
         }
 
@@ -69,12 +66,11 @@ namespace PeopleProTraining.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Department department = db.DepartmentsList.Find(id);
+            Department department = db.Departments.Find(id);
             if (department == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.DepartmentIdBep = new SelectList(db.BuildingsList, "BuildingId", "BuildingName", department.DepartmentId);
             return View(department);
         }
 
@@ -83,7 +79,7 @@ namespace PeopleProTraining.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "DepartmentIdBep,DepartmentName")] Department department)
+        public ActionResult Edit([Bind(Include = "DepartmentId,DepartmentName")] Department department)
         {
             if (ModelState.IsValid)
             {
@@ -91,7 +87,6 @@ namespace PeopleProTraining.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.DepartmentIdBep = new SelectList(db.BuildingsList, "BuildingId", "BuildingName", department.DepartmentId);
             return View(department);
         }
 
@@ -102,7 +97,7 @@ namespace PeopleProTraining.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Department department = db.DepartmentsList.Find(id);
+            Department department = db.Departments.Find(id);
             if (department == null)
             {
                 return HttpNotFound();
@@ -115,8 +110,8 @@ namespace PeopleProTraining.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Department department = db.DepartmentsList.Find(id);
-            db.DepartmentsList.Remove(department);
+            Department department = db.Departments.Find(id);
+            db.Departments.Remove(department);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -1,0 +1,13 @@
+﻿@model PeopleProTraining.Models.TableDisplayModel
+
+<td>
+    @Html.DisplayFor(modelItem => modelItem.DisplayValue)
+</td>
+<td>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EditId }) |
+    @Html.ActionLink("Details", "Details", new { id = Model.EditId }) |
+    @Html.ActionLink("Delete", "Delete", new { id = Model.EditId})
+</td>
+
+
+

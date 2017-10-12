@@ -60,9 +60,9 @@
     <Compile Include="Infrastructure\PeopleProRepo.cs" />
     <Compile Include="Interfaces\IPeopleProContext.cs" />
     <Compile Include="Interfaces\IPeopleProRepo.cs" />
-    <Compile Include="Migrations\201710121727266_Bep.cs" />
-    <Compile Include="Migrations\201710121727266_Bep.Designer.cs">
-      <DependentUpon>201710121727266_Bep.cs</DependentUpon>
+    <Compile Include="Migrations\201710121803411_Bep.cs" />
+    <Compile Include="Migrations\201710121803411_Bep.Designer.cs">
+      <DependentUpon>201710121803411_Bep.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Building.cs" />
@@ -78,8 +78,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710121727266_Bep.resx">
-      <DependentUpon>201710121727266_Bep.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710121803411_Bep.resx">
+      <DependentUpon>201710121803411_Bep.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

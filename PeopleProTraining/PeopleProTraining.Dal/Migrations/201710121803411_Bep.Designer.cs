@@ -13,7 +13,7 @@ namespace PeopleProTraining.Dal.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201710121727266_Bep"; }
+            get { return "201710121803411_Bep"; }
         }
         
         string IMigrationMetadata.Source

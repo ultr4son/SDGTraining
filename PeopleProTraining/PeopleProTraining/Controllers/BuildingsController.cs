@@ -18,8 +18,7 @@ namespace PeopleProTraining.Controllers
         // GET: Buildings
         public ActionResult Index()
         {
-            var buildings = db.BuildingsList.Include(b => b.BuildingDepartment);
-            return View(buildings.ToList());
+            return View(db.Buildings.ToList());
         }
 
         // GET: Buildings/Details/5
@@ -29,7 +28,7 @@ namespace PeopleProTraining.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Building building = db.BuildingsList.Find(id);
+            Building building = db.Buildings.Find(id);
             if (building == null)
             {
                 return HttpNotFound();
@@ -40,7 +39,6 @@ namespace PeopleProTraining.Controllers
         // GET: Buildings/Create
         public ActionResult Create()
         {
-            ViewBag.BuildingId = new SelectList(db.DepartmentsList, "DepartmentIdBep", "DepartmentName");
             return View();
         }
 
@@ -53,12 +51,11 @@ namespace PeopleProTraining.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.BuildingsList.Add(building);
+                db.Buildings.Add(building);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.BuildingId = new SelectList(db.DepartmentsList, "DepartmentIdBep", "DepartmentName", building.BuildingId);
             return View(building);
         }
 
@@ -69,12 +66,11 @@ namespace PeopleProTraining.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Building building = db.BuildingsList.Find(id);
+            Building building = db.Buildings.Find(id);
             if (building == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.BuildingId = new SelectList(db.DepartmentsList, "DepartmentIdBep", "DepartmentName", building.BuildingId);
             return View(building);
         }
 
@@ -91,7 +87,6 @@ namespace PeopleProTraining.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.BuildingId = new SelectList(db.DepartmentsList, "DepartmentIdBep", "DepartmentName", building.BuildingId);
             return View(building);
         }
 
@@ -102,7 +97,7 @@ namespace PeopleProTraining.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Building building = db.BuildingsList.Find(id);
+            Building building = db.Buildings.Find(id);
             if (building == null)
             {
                 return HttpNotFound();
@@ -115,8 +110,8 @@ namespace PeopleProTraining.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Building building = db.BuildingsList.Find(id);
-            db.BuildingsList.Remove(building);
+            Building building = db.Buildings.Find(id);
+            db.Buildings.Remove(building);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
