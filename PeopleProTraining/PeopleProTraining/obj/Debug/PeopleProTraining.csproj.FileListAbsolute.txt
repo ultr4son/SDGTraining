@@ -52,3 +52,10 @@ C:\Users\thomtris\Source\Repos\SDGTraining\PeopleProTraining\PeopleProTraining\b
 C:\Users\thomtris\Source\Repos\SDGTraining\PeopleProTraining\PeopleProTraining\obj\Debug\PeopleProTraining.csprojResolveAssemblyReference.cache
 C:\Users\thomtris\Source\Repos\SDGTraining\PeopleProTraining\PeopleProTraining\obj\Debug\PeopleProTraining.dll
 C:\Users\thomtris\Source\Repos\SDGTraining\PeopleProTraining\PeopleProTraining\obj\Debug\PeopleProTraining.pdb
+C:\Users\thomtris\Source\Repos\SDGTraining\PeopleProTraining\PeopleProTraining\bin\Antlr3.Runtime.dll
+C:\Users\thomtris\Source\Repos\SDGTraining\PeopleProTraining\PeopleProTraining\bin\Newtonsoft.Json.dll
+C:\Users\thomtris\Source\Repos\SDGTraining\PeopleProTraining\PeopleProTraining\bin\System.Web.Optimization.dll
+C:\Users\thomtris\Source\Repos\SDGTraining\PeopleProTraining\PeopleProTraining\bin\WebGrease.dll
+C:\Users\thomtris\Source\Repos\SDGTraining\PeopleProTraining\PeopleProTraining\bin\Antlr3.Runtime.pdb
+C:\Users\thomtris\Source\Repos\SDGTraining\PeopleProTraining\PeopleProTraining\bin\Newtonsoft.Json.xml
+C:\Users\thomtris\Source\Repos\SDGTraining\PeopleProTraining\PeopleProTraining\bin\System.Web.Optimization.xml

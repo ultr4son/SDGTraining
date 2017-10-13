@@ -8,19 +8,20 @@ using System.Web;
 using System.Web.Mvc;
 using PeopleProTraining.Dal.Infrastructure;
 using PeopleProTraining.Dal.Models;
+using PeopleProTraining.Models;
 
 namespace PeopleProTraining.Controllers
 {
     public class BuildingsController : Controller
     {
         private PeopleProContext db = new PeopleProContext();
-
         // GET: Buildings
         public ActionResult Index()
         {
             return View(db.Buildings.ToList());
         }
 
+        
         // GET: Buildings/Details/5
         public ActionResult Details(int? id)
         {
@@ -58,6 +59,7 @@ namespace PeopleProTraining.Controllers
 
             return View(building);
         }
+                
 
         // GET: Buildings/Edit/5
         public ActionResult Edit(int? id)

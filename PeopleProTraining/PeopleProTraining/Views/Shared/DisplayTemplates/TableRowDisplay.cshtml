@@ -1,0 +1,13 @@
+﻿@model PeopleProTraining.Models.TableRowDisplayModel
+
+<td>
+    @Html.DisplayNameFor(model => model.DisplayValue)
+</td>
+<td>
+    @          foreach (var item in Model) |
+    @Html.ActionLink("Details", "Details", new { id = Model.EditId }) |
+    @Html.ActionLink("Delete", "Delete", new { id = Model.EditId})
+</td>
+
+
+
