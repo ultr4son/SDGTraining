@@ -4,35 +4,41 @@
 
 @Scripts.Render("~/bundles/jquery");
 
+@{
+
 <script>
+    
+        
     function onClick() {
-        $.post("/" + Model.Controller + "/CreateDynamic")
-        .done(function (response) {
-            $(Model.ListId).html(response);
+    $.post("/" + @Model.Controller + "/CreateDynamic", $("editor").value)
+    .done(function(response) {
+        $(@Model.TableId).html(response);
         })
     }
+    
 </script>
+}
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Building</h4>
+        <h4>Add New</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.Label(Model.Label)
 
             <div class="col-md-10">
-                @Html.EditorFor(model => model.EditItem, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.EditItem, "", new { @class = "text-danger" })
+                @Html.Editor(Model.Label, new { htmlAttributes = new { @class = "form-control", id = "editor"} })
+                @Html.ValidationMessage(Model.Label, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <button value="Create" onclick="onClick" class="btn btn-default" />
+                <button value="Create" onclick="onClick" class="btn btn-default" >Add</button>
             </div>
         </div>
     </div>

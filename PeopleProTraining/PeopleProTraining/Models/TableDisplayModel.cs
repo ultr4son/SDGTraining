@@ -7,8 +7,8 @@ namespace PeopleProTraining.Models
 {
     public class TableDisplayModel
     {
-        public string ItemName { get; set; }
-        public string ItemId { get; set; }
-   
+        public IEnumerable<TableRowDisplayModel> Table { get; set; }
+        public string DisplayName { get; set; }
+        public string TableId { get; set; }
     }
 }

@@ -1,13 +1,14 @@
 ﻿@model PeopleProTraining.Models.TableRowDisplayModel
 
 <td>
-    @Html.DisplayNameFor(model => model.DisplayValue)
+    @Model.DisplayValue
 </td>
 <td>
-    @          foreach (var item in Model) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EditId }) |
     @Html.ActionLink("Details", "Details", new { id = Model.EditId }) |
-    @Html.ActionLink("Delete", "Delete", new { id = Model.EditId})
+    @Html.ActionLink("Delete", "Delete", new { id = Model.EditId })
 </td>
+
 
 
 

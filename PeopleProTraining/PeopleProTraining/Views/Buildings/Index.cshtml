@@ -1,5 +1,4 @@
-﻿@using System.Web.Optimization
-@using PeopleProTraining.Models
+﻿@using PeopleProTraining.Models
 @model IEnumerable<PeopleProTraining.Dal.Models.Building>
 
 
@@ -20,20 +19,10 @@
     <p>
         @Html.ActionLink("Create New", "Create")
     </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.BuildingName)
-            </th>
-            <th></th>
-        </tr>
+    @{ 
+        IEnumerable<TableRowDisplayModel> items = Model.Select(item => new TableRowDisplayModel { DisplayValue = item.BuildingName, EditId = item.BuildingId });
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                @Html.Partial("../Shared/DisplayTemplates/TableRowDisplay", new TableRowDisplayModel { DisplayValue = item.BuildingName, EditId = item.BuildingId })
-            </tr>
-        }
-
-    </table>
-    @Html.ActionLink("Add", "Editor")
+        Html.RenderPartial("../Shared/DisplayTemplates/TableDisplay", new TableDisplayModel { TableId = "BuildingTable", DisplayName = Html.DisplayNameFor(model => model.BuildingName).ToHtmlString(), Table = items });
+    }
+    
+    @Html.Partial("../Shared/EditorTemplates/ItemCreator", new ItemCreatorModel { Label = "Building", Controller="Buildings", TableId="BuildingTable" })

@@ -9,3 +9,4 @@ C:\Users\thomtris\Source\Repos\SDGTraining\PeopleProTraining\PeopleProTraining.D
 C:\Users\thomtris\Source\Repos\SDGTraining\PeopleProTraining\PeopleProTraining.Dal\obj\Debug\PeopleProTraining.Dal.pdb
 C:\Users\thomtris\Source\Repos\SDGTraining\PeopleProTraining\PeopleProTraining.Dal\obj\Debug\PeopleProTraining.Dal.Migrations.Bep.resources
 C:\Users\thomtris\Source\Repos\SDGTraining\PeopleProTraining\PeopleProTraining.Dal\obj\Debug\PeopleProTraining.Dal.csproj.GenerateResource.Cache
+C:\Users\thomtris\Source\Repos\SDGTraining\PeopleProTraining\PeopleProTraining.Dal\obj\Debug\PeopleProTraining.Dal.csprojResolveAssemblyReference.cache

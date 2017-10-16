@@ -189,10 +189,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\BuildingsModel.cs" />
     <Compile Include="Models\ItemCreatorModel.cs" />
     <Compile Include="Models\TableDisplayModel.cs" />
-    <Compile Include="Models\TableEditModel.cs" />
+    <Compile Include="Models\TableRowDisplayModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -218,7 +217,6 @@
     <Content Include="Views\Buildings\Edit.cshtml" />
     <Content Include="Views\Buildings\Index.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\TableRowDisplay.cshtml" />
-    <Content Include="Views\Shared\EditorTemplates\TableEdit.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\ItemCreator.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\TableDisplay.cshtml" />
     <None Include="Views\web.Debug.config">
