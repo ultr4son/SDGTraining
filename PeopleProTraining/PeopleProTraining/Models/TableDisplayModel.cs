@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 
 namespace PeopleProTraining.Models
 {
@@ -10,5 +7,7 @@ namespace PeopleProTraining.Models
         public IEnumerable<TableRowDisplayModel> Table { get; set; }
         public string DisplayName { get; set; }
         public string TableId { get; set; }
+
+
     }
 }

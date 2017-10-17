@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<PeopleProTraining.Dal.Models.Department>
-
+@using PeopleProTraining.Models
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -10,26 +10,6 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.DepartmentName)
-        </th>
-        <th></th>
-    </tr>
+@Html.Partial("../Shared/DisplayTemplates/TableDisplay", DepartmentTableDisplayModel.make(Model))
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.DepartmentName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.DepartmentId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.DepartmentId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.DepartmentId })
-            
-        </td>
-    </tr>
-}
-
-</table>
+@Html.Partial("../Shared/EditorTemplates/ItemCreator", new ItemCreatorModel { Label = "Department", Controller = "Departments", TableId = "DepartmentsTable" })

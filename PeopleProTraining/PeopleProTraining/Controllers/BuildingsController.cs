@@ -59,14 +59,19 @@ namespace PeopleProTraining.Controllers
 
             return View(building);
         }
+        
+        //Buildings/Add
         [HttpPost]
-       
-        public ActionResult Add(string buildingName)
+        public ActionResult Add(string itemName)
         {
-            db.Buildings.Add(new Building { BuildingName = buildingName });
+            if (itemName == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            db.Buildings.Add(new Building { BuildingName = itemName });
             db.SaveChanges();
 
-            return PartialView(@"~\Views\Shared\DisplayTemplates\TableDisplay.cshtml", new BuildingTableDisplay(db.Buildings, PeopleProTraining.Core.Infrastructure.Util.GetPropertyDisplayName<Building>(b => b.BuildingName)));
+            return PartialView(@"~\Views\Shared\DisplayTemplates\TableDisplay.cshtml", BuildingTableDisplayModel.make(db.Buildings));
           
         }        
 

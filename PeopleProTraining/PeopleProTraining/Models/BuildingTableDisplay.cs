@@ -1,18 +1,21 @@
 ﻿using PeopleProTraining.Dal.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace PeopleProTraining.Models
 {
-    public class BuildingTableDisplay : TableDisplayModel
+    public class BuildingTableDisplayModel 
     {
-        public BuildingTableDisplay(IEnumerable<Building> buildings, string displayName)
+        /// <summary>
+        /// Generate TableDisplayModel
+        /// </summary>
+        /// <param name="items"></param>
+        /// <returns></returns>
+        public static TableDisplayModel make(IEnumerable<Building> items)
         {
-            Table = buildings.Select(building => new TableRowDisplayModel { DisplayValue = building.BuildingName, EditId = building.BuildingId });
-            DisplayName = displayName;
-            TableId = "BuildingsTable";
+            return ModelUtil.table(items,
+            b => new TableRowDisplayModel { DisplayValue = b.BuildingName, EditId = b.BuildingId },
+            b => b.BuildingName,
+            "BuildingsTable");
         }
     }
 }

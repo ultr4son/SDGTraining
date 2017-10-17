@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using PeopleProTraining.Dal.Infrastructure;
 using PeopleProTraining.Dal.Models;
+using PeopleProTraining.Models;
 
 namespace PeopleProTraining.Controllers
 {
@@ -57,6 +54,22 @@ namespace PeopleProTraining.Controllers
             }
 
             return View(department);
+        }
+
+        // POST: Departments/Add
+        [HttpPost]
+        public ActionResult Add(string itemName)
+        {
+            if (itemName == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            db.Departments.Add(new Department { DepartmentName = itemName });
+            db.SaveChanges();
+
+            return PartialView(@"~\Views\Shared\DisplayTemplates\TableDisplay.cshtml", DepartmentTableDisplayModel.make(db.Departments));
+
         }
 
         // GET: Departments/Edit/5

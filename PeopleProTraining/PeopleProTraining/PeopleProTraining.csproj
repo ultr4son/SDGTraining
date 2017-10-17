@@ -190,7 +190,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\BuildingTableDisplay.cs" />
+    <Compile Include="Models\DepartmentTableDisplayModel.cs" />
     <Compile Include="Models\ItemCreatorModel.cs" />
+    <Compile Include="Models\ModelUtil.cs" />
     <Compile Include="Models\TableDisplayModel.cs" />
     <Compile Include="Models\TableRowDisplayModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
