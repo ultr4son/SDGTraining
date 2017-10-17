@@ -12,7 +12,7 @@ namespace PeopleProTraining.Models
         public string EditItem { get; set; }
         public string TableId { get; set; }
         public string Controller { get; set; }
-
+        public string DisplayName { get; set; }
         public Expression<Func<object, string>> For { get; set; }
         
     }

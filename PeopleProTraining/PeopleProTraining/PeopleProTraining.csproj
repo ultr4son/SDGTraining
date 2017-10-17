@@ -189,6 +189,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BuildingTableDisplay.cs" />
     <Compile Include="Models\ItemCreatorModel.cs" />
     <Compile Include="Models\TableDisplayModel.cs" />
     <Compile Include="Models\TableRowDisplayModel.cs" />

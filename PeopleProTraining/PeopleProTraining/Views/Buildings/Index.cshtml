@@ -10,19 +10,15 @@
     }
 
 
-    <script>
-        function onClick(e) {
-        }
-    </script>
     <h2>Index</h2>
 
     <p>
         @Html.ActionLink("Create New", "Create")
     </p>
     @{ 
-        IEnumerable<TableRowDisplayModel> items = Model.Select(item => new TableRowDisplayModel { DisplayValue = item.BuildingName, EditId = item.BuildingId });
+        //IEnumerable<TableRowDisplayModel> items = Model.Select(item => new TableRowDisplayModel { DisplayValue = item.BuildingName, EditId = item.BuildingId });
 
-        Html.RenderPartial("../Shared/DisplayTemplates/TableDisplay", new TableDisplayModel { TableId = "BuildingTable", DisplayName = Html.DisplayNameFor(model => model.BuildingName).ToHtmlString(), Table = items });
+        Html.RenderPartial("../Shared/DisplayTemplates/TableDisplay", new BuildingTableDisplay(Model, Html.DisplayNameFor(model => model.BuildingName).ToHtmlString())); //new TableDisplayModel { TableId = "BuildingTable", DisplayName = Html.DisplayNameFor(model => model.BuildingName).ToHtmlString(), Table = items });
     }
     
-    @Html.Partial("../Shared/EditorTemplates/ItemCreator", new ItemCreatorModel { Label = "Building", Controller="Buildings", TableId="BuildingTable" })
+    @Html.Partial("../Shared/EditorTemplates/ItemCreator", new ItemCreatorModel { Label = "Building", Controller="Buildings", TableId="BuildingsTable" })
